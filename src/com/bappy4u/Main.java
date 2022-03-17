@@ -13,5 +13,11 @@ public class Main {
         else{
             System.out.println("Password doesn't match.");
         }
+
+
+        Airplane biplane = new Airplane();
+
+        biplane.setSpeed(212);
+        System.out.println(biplane.getSpeed());
     }
 }
