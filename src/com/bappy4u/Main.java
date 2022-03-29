@@ -1,5 +1,7 @@
 package com.bappy4u;
 
+import com.bappy4u.ricksGuiter.Guitar;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -38,5 +40,9 @@ public class Main {
             i++;
         }
         System.out.println(biplane.getSpeed());
+
+        Guitar guitar = new Guitar("3",4.16,"Yamaha","ym11","rock","Segun","kathal");
+
+        System.out.println("Guitar Builder: " + guitar.getBuilder() + " Model: "+guitar.getModel());
     }
 }
