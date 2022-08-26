@@ -44,4 +44,30 @@ public class graph {
             }
         }
     }
+    public void removeNode(String label){
+        var node = this.nodes.get(label);
+        if (node==null){
+            return;
+        }
+
+        for (var adj : adjancencyList.keySet()){
+            adjancencyList.get(adj).remove(node);
+        }
+
+        adjancencyList.remove(node);
+        this.nodes.remove(node);
+    }
+
+    public void removeEdges(String from, String to){
+        var fromNode = this.nodes.get(from);
+        var toNode = this.nodes.get(to);
+
+        if (fromNode==null || toNode==null){
+            return;
+        }
+
+        for(var adj: adjancencyList.keySet()){
+            this.adjancencyList.get(fromNode).remove(toNode);
+        }
+    }
 }

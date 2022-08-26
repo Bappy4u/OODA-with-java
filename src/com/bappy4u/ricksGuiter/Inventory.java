@@ -1,5 +1,6 @@
 package com.bappy4u.ricksGuiter;
 
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -28,23 +29,23 @@ public class Inventory {
             // Ignore serial number since that’s unique
             // Ignore price since that’s unique
             String builder = searchGuitar.getBuilder();
-            if ((builder != null) && (!builder.equals(“”)) &&
+            if ((builder != null) && (!builder.equals("")) &&
                     (!builder.equals(guitar.getBuilder())))
                 continue;
             String model = searchGuitar.getModel();
-            if ((model != null) && (!model.equals(“”)) &&
+            if ((model != null) && (!model.equals("")) &&
                     (!model.equals(guitar.getModel())))
                 continue;
             String type = searchGuitar.getType();
-            if ((type != null) && (!searchGuitar.equals(“”)) &&
+            if ((type != null) && (!searchGuitar.equals("")) &&
                     (!type.equals(guitar.getType())))
                 continue;
             String backWood = searchGuitar.getBackWood();
-            if ((backWood != null) && (!backWood.equals(“”)) &&
+            if ((backWood != null) && (!backWood.equals("")) &&
                     (!backWood.equals(guitar.getBackWood())))
                 continue;
             String topWood = searchGuitar.getTopWood();
-            if ((topWood != null) && (!topWood.equals(“”)) &&
+            if ((topWood != null) && (!topWood.equals("")) &&
                     (!topWood.equals(guitar.getTopWood())))
                 continue;
         }
